@@ -1,0 +1,134 @@
+@font-face {
+    font-family: "Gotham book";
+    src: url("./font/Gotham-Book.otf") format("truetype");
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-weight: bold;
+    font-family: "Gotham book", "Roboto", sans-serif;
+  }
+  
+  ::-webkit-scrollbar {
+    display: none;
+  }
+  
+  body {
+    overflow-x: hidden;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  section {
+    height: 100vh;
+    width: 100vw;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  li {
+    list-style-type: none;
+  }
+  ul {
+    display: flex;
+  }
+  a {
+    text-decoration: none;
+  }
+  p {
+    color: white;
+    cursor: default;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    color: white;
+    cursor: default;
+  }
+  
+  .fade-in {
+    opacity: 0;
+    animation: fadeIn ease-in 2s forwards;
+  }
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  /* LANDING PAGE */
+  
+  .video {
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    object-fit: cover;
+    height: 100vh;
+  }
+  #landing__page::before {
+    position: absolute;
+    content: "";
+  
+    background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 0.259) 90%
+    );
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+  }
+  .landing__page--greeting--container {
+    display: flex;
+    width: fit-content;
+    max-width: 800px;
+    height: 300px;
+    padding: 20px;
+    border-radius: 40px;
+    margin-left: 10vw;
+    z-index: 2;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .landing__page--title {
+    width: 600px;
+    text-align: left;
+    color: white;
+    position: relative;
+    height: fit-content;
+    margin-top: 30px;
+    font-size: 32px;
+    z-index: 3;
+    text-transform: uppercase;
+  }
+  .landing__page--para {
+    font-weight: 400;
+    font-size: 16px;
+    width: fit-content;
+    max-width: 400px;
+    text-align: left;
+  }
+  #landing__page {
+    height: calc(100vh - 80px);
+  }
+  
+  /* NAVBAR */
+  nav {
+    width: 100vw;
+    height: 80px;
+    background-color: transparent;
+  }
+  
